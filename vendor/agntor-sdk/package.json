@@ -1,0 +1,72 @@
+{
+  "name": "@agntor/sdk",
+  "version": "0.1.0",
+  "description": "Trust and payment rail for AI agents — identity, verification, escrow, settlement, and reputation.",
+  "type": "module",
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "keywords": [
+    "agntor",
+    "agent",
+    "trust",
+    "escrow",
+    "settlement",
+    "reputation",
+    "verification",
+    "identity",
+    "ai-agents",
+    "x402",
+    "jwt",
+    "guard",
+    "redact",
+    "blockchain",
+    "ssrf"
+  ],
+  "author": "Agntor Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agntor/agntor.git",
+    "directory": "packages/sdk"
+  },
+  "bugs": {
+    "url": "https://github.com/agntor/agntor/issues"
+  },
+  "homepage": "https://agntor.com",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "node --test",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "ipaddr.js": "^2.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}
