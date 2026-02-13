@@ -1,41 +1,40 @@
 # agntor-cli
 
-A security scanner for AI agent systems. Detects prompt injection, leaked secrets, SSRF attacks, and scam transactions — then uses GitHub Copilot CLI to explain what was found and why it matters.
+Security scanner for AI agent systems. Detects prompt injection, leaked secrets (including crypto private keys), SSRF attacks, and scam transactions — then uses GitHub Copilot CLI to explain what was found and why it matters.
 
-Built on top of [@agntor/sdk](https://github.com/agntor/agntor), the open-source trust infrastructure for autonomous AI agent economies.
+Built on top of [@agntor/sdk](https://github.com/agntor/agntor), the open-source trust and payment rail for autonomous AI agent economies.
 
 ## Demo
 
-### Full Security Scan
+### Full Security Scan — Catches injection + secrets + explains both
 
 [![Full scan demo](https://asciinema.org/a/Wu6wGqY2dP6YpHPD.svg)](https://asciinema.org/a/Wu6wGqY2dP6YpHPD)
 
-### Prompt Injection Detection
+### Secret Redaction — AWS keys, ETH private keys, mnemonics
 
-[![Guard demo](https://asciinema.org/a/Wu6wGqY2dP6YpHPD.svg)](https://asciinema.org/a/Wu6wGqY2dP6YpHPD)
+[![Redact demo](https://asciinema.org/a/FCmK8qXvQv3Ff4J3.svg)](https://asciinema.org/a/FCmK8qXvQv3Ff4J3)
 
-### Secret Redaction
+### Settlement Risk — Catches zero-address scams, low reputation, vague services
 
-[![Redact demo](https://asciinema.org/a/5RX31CFGQ80xlLDK.svg)](https://asciinema.org/a/5RX31CFGQ80xlLDK)
+[![Settlement demo](https://asciinema.org/a/5RX31CFGQ80xlLDK.svg)](https://asciinema.org/a/5RX31CFGQ80xlLDK)
 
 ## Installation
 
-```bash
-npm install -g agntor-cli
-```
-
-Or run directly with npx:
-
-```bash
-npx agntor-cli scan "your input here"
-```
-
 ### Prerequisites
 
-- Node.js >= 18
-- [GitHub Copilot CLI](https://docs.github.com/en/copilot/github-copilot-in-the-cli) (optional, for threat explanations)
+- [Node.js](https://nodejs.org/) 18+
+- [GitHub CLI](https://cli.github.com/) with [Copilot extension](https://github.com/github/copilot-cli) (recommended, but works without it)
 
-Copilot CLI is not required. Without it, agntor-cli outputs raw scan results. With it, every finding gets a plain-English explanation of what was detected and why it's dangerous.
+### Install
+
+```bash
+git clone https://github.com/Garinmckayl/agntor-cli.git
+cd agntor-cli
+npm install
+npm run build
+```
+
+GitHub Copilot CLI is not required. Without it, agntor-cli outputs raw scan results. With it, every finding gets a plain-English explanation of what was detected and why it's dangerous.
 
 ## Usage
 
