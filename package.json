@@ -1,0 +1,41 @@
+{
+  "name": "agntor-cli",
+  "version": "1.0.0",
+  "description": "Security scanner for AI agent systems — prompt injection detection, secret redaction, settlement risk analysis, and audit ticket inspection, powered by @agntor/sdk and GitHub Copilot CLI",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "agntor": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts"
+  },
+  "keywords": [
+    "ai-agent",
+    "security",
+    "copilot",
+    "cli",
+    "prompt-injection",
+    "redaction",
+    "trust",
+    "x402"
+  ],
+  "author": "Natnael Getenew Zeleke",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@agntor/sdk": "file:./vendor/agntor-sdk",
+    "chalk": "^4.1.2",
+    "boxen": "^5.1.2",
+    "commander": "^12.1.0",
+    "ora": "^5.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  }
+}
