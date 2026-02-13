@@ -28,7 +28,7 @@
     "node": ">=18.0.0"
   },
   "dependencies": {
-    "@agntor/sdk": "file:./vendor/agntor-sdk",
+    "@agntor/sdk": "^0.1.0",
     "chalk": "^4.1.2",
     "boxen": "^5.1.2",
     "commander": "^12.1.0",
